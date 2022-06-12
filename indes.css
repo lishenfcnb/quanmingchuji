@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(./images/f1_1.jpg);
+    background-repeat: no-repeat;
+    /* 图片等比例缩,当宽度或高度有一个和盒子相等时
+    不管另外一项有没有相等,都会停止 */
+    background-size: cover;
+    /*图片等比例缩放 图片完全覆盖盒子,可能会导致图片显示不全  */
+    height: 100%;
+    background-position: center;
+}
+
+.box1 img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.box1 img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+    animation: yangyi 1s infinite alternate;
+}
+
+.box1 img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: yangyi 1s infinite alternate;
+}
+
+.box1 img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: yangyi 1s infinite alternate;
+}
+
+
+/* 云彩动画 */
+
+@keyframes yangyi {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+
+/* 气球样式 */
+
+.qiu {
+    position: absolute;
+    left: 28%;
+    top: 115px;
+    animation: qiu 2s infinite alternate;
+}
+
+@keyframes qiu {
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+
+/* 尾部四标签样式 */
+
+.label {
+    position: absolute;
+    top: 600px;
+}
+
+.label img {
+    width: 100px;
+}
+
+.label img:nth-child(1) {
+    margin-left: 340px;
+    animation: label 1s infinite alternate 0.3s;
+}
+
+.label img:nth-child(2) {
+    margin-left: 140px;
+    animation: label 1s infinite alternate 0.4s;
+}
+
+.label img:nth-child(3) {
+    margin-left: 145px;
+    animation: label 1s infinite alternate 0.3s;
+}
+
+.label img:nth-child(4) {
+    margin-left: 150px;
+    animation: label 1s infinite alternate 0.2s;
+}
+
+@keyframes label {
+    to {
+        transform: translateY(-30px);
+    }
+}
